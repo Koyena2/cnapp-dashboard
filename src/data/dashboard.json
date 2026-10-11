@@ -1,0 +1,143 @@
+{
+  "name": "CNAPP Dashboard",
+  "categories": [
+    {
+      "id": "cspm",
+      "tab": "CSPM",
+      "name": "CSPM Executive Dashboard",
+      "widgets": [
+        {
+          "id": "cspm-cloud-accounts",
+          "name": "Cloud Accounts",
+          "text": "2 cloud accounts in total.",
+          "type": "donut",
+          "visible": true,
+          "data": {
+            "total": 2,
+            "totalLabel": "Total",
+            "segments": [
+              { "label": "Connected", "value": 2, "color": "#4f7cff" },
+              { "label": "Not Connected", "value": 2, "color": "#e3e8f8" }
+            ]
+          }
+        },
+        {
+          "id": "cspm-risk-assessment",
+          "name": "Cloud Account Risk Assessment",
+          "text": "Risk summary across all connected accounts.",
+          "type": "donut",
+          "visible": true,
+          "data": {
+            "total": 9659,
+            "totalLabel": "Total",
+            "segments": [
+              { "label": "Failed", "value": 1689, "color": "#c5161d" },
+              { "label": "Warning", "value": 681, "color": "#f2c230" },
+              { "label": "Not available", "value": 36, "color": "#c9ced8" },
+              { "label": "Passed", "value": 7253, "color": "#1ea35b" }
+            ]
+          }
+        },
+        {
+          "id": "cspm-compliance",
+          "name": "Compliance Score",
+          "text": "Overall compliance score is 87% across all frameworks.",
+          "type": "text",
+          "visible": false
+        }
+      ]
+    },
+    {
+      "id": "cwpp",
+      "tab": "CWPP",
+      "name": "CWPP Dashboard:",
+      "widgets": [
+        {
+          "id": "cwpp-namespace-alerts",
+          "name": "Top 5 Namespace Specific Alerts",
+          "text": "",
+          "type": "empty",
+          "visible": true
+        },
+        {
+          "id": "cwpp-workload-alerts",
+          "name": "Workload Alerts",
+          "text": "",
+          "type": "empty",
+          "visible": true
+        },
+        {
+          "id": "cwpp-runtime-threats",
+          "name": "Runtime Threats",
+          "text": "No runtime threats detected in the selected period.",
+          "type": "text",
+          "visible": false
+        }
+      ]
+    },
+    {
+      "id": "registry",
+      "tab": "Image",
+      "name": "Registry Scan",
+      "widgets": [
+        {
+          "id": "registry-image-risk",
+          "name": "Image Risk Assessment",
+          "text": "Vulnerabilities grouped by severity.",
+          "type": "stackbar",
+          "visible": true,
+          "data": {
+            "total": 1470,
+            "totalLabel": "Total Vulnerabilities",
+            "segments": [
+              { "label": "Critical", "value": 9, "color": "#7a0d0d" },
+              { "label": "High", "value": 150, "color": "#d9302c" },
+              { "label": "Medium", "value": 650, "color": "#f28c38" },
+              { "label": "Low", "value": 600, "color": "#f4c542" },
+              { "label": "Unknown", "value": 61, "color": "#a8a8a8" }
+            ]
+          }
+        },
+        {
+          "id": "registry-image-issues",
+          "name": "Image Security Issues",
+          "text": "Security issues found in scanned images.",
+          "type": "stackbar",
+          "visible": true,
+          "data": {
+            "total": 2,
+            "totalLabel": "Total Images",
+            "segments": [
+              { "label": "Critical", "value": 2, "color": "#7a0d0d" },
+              { "label": "High", "value": 2, "color": "#d9302c" },
+              { "label": "Medium", "value": 2, "color": "#f28c38" },
+              { "label": "Low", "value": 1, "color": "#f4c542" },
+              { "label": "Unknown", "value": 1, "color": "#a8a8a8" }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "id": "ticket",
+      "tab": "Ticket",
+      "name": "Ticket Overview",
+      "widgets": [
+        {
+          "id": "ticket-open",
+          "name": "Open Tickets",
+          "text": "14 tickets are open and waiting for review.",
+          "type": "text",
+          "visible": false
+        },
+        {
+          "id": "ticket-resolved",
+          "name": "Resolved Tickets",
+          "text": "48 tickets were resolved in the last 2 days.",
+          "type": "text",
+          "visible": false
+        }
+      ]
+    }
+  ]
+}
